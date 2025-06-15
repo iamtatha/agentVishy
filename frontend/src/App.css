@@ -1,0 +1,183 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-primary);
+}
+
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* App layout */
+.App {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: var(--bg-primary);
+}
+
+.app-content {
+    display: flex;
+    flex: 1;
+}
+
+/* Common panel styles */
+.panel {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--panel-border);
+    height: 100%;
+    min-height: 600px; /* Ensure minimum height for content */
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.panel-icon {
+    font-size: 1.2em;
+    color: var(--accent-color);
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.panel-description {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    margin: 0 0 20px 0;
+    line-height: 1.4;
+}
+
+.App-header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    color: white;
+}
+
+.App-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.App-main {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.game-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    min-width: 0;
+}
+
+.chess-board {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.board-header {
+    color: #282c34;
+    margin-bottom: 15px;
+}
+
+.board-header h2 {
+    margin: 0 0 10px 0;
+}
+
+.board-header p {
+    margin: 5px 0;
+}
+
+.board-footer {
+    color: #282c34;
+    margin-top: 15px;
+}
+
+.match-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #282c34;
+    width: 500px;
+}
+
+.match-controls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.match-controls button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.match-controls button:hover:not(:disabled) {
+    background: #357abd;
+}
+
+.move-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.move-slider input[type="range"] {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .App-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-section {
+        margin-bottom: 30px;
+    }
+} 

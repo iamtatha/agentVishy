@@ -1,0 +1,356 @@
+.game-config {
+    width: 280px;
+    background-color: var(--bg-primary);
+    min-width: 280px;
+    border-left: 1px solid var(--border-color);
+}
+
+.config-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.config-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.selected-match {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #e8f0fe;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.status-icon {
+    font-size: 1.1em;
+    color: #1a73e8;
+}
+
+.status-text {
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.status-text .match-name {
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+.section-note {
+    color: #5f6368;
+    font-size: 0.9em;
+    margin: 0;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.match-type-selector {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+}
+
+.match-type-selector label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.match-type-selector input[type="radio"] {
+    margin: 0;
+}
+
+.match-type-selector label:hover {
+    color: #1a73e8;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 16px;
+    padding-right: 32px;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.2);
+}
+
+.form-group select:disabled {
+    background-color: var(--bg-secondary);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.form-group select option {
+    padding: 8px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.form-group select optgroup {
+    font-weight: 500;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}
+
+/* Style for the dropdown when opened */
+.form-group select:focus option:checked,
+.form-group select option:checked {
+    background: var(--accent-color);
+    color: white;
+}
+
+.form-group select option:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Firefox specific styles */
+@-moz-document url-prefix() {
+    .form-group select {
+        color: var(--text-primary);
+        background-color: var(--bg-primary);
+    }
+    
+    .form-group select option,
+    .form-group select optgroup {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+    }
+}
+
+/* Webkit specific styles */
+.form-group select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-group select::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.form-group select::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 4px;
+}
+
+.form-group select::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-secondary);
+}
+
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.form-group input[type="number"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(var(--accent-color-rgb), 0.2);
+}
+
+.form-group input[type="number"]:disabled,
+.form-group input[type="password"]:disabled,
+.form-group input[type="text"]:disabled {
+    background-color: var(--bg-secondary);
+    cursor: not-allowed;
+    color: var(--text-secondary);
+}
+
+.form-group optgroup {
+    font-weight: 500;
+    color: #202124;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 4px;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+.radio-label:hover:not(.disabled) {
+    border-color: var(--accent-color);
+    background-color: var(--bg-secondary);
+}
+
+.radio-label.selected {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.radio-label input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dadce0;
+    border-radius: 50%;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.radio-label:hover input[type="radio"]:not(:checked) {
+    border-color: #1a73e8;
+}
+
+.radio-label input[type="radio"]:checked {
+    border-color: #1a73e8;
+    border-width: 6px;
+}
+
+.radio-label input[type="radio"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #dadce0;
+}
+
+.radio-label.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: var(--bg-secondary);
+}
+
+.api-key-input {
+    margin-top: -8px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    border-left: 2px solid var(--border-color);
+}
+
+.api-key-input input.open-source-input {
+    background-color: #f8f9fa;
+    color: #5f6368;
+    font-style: italic;
+    cursor: not-allowed;
+}
+
+.form-group input[type="text"]:disabled {
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #5f6368;
+    cursor: not-allowed;
+}
+
+.start-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.start-button:hover:not(:disabled) {
+    background-color: var(--accent-hover);
+}
+
+.start-button:disabled {
+    background-color: var(--disabled-bg);
+    cursor: not-allowed;
+}
+
+.playback-controls {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.playback-controls button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dadce0;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.playback-controls button:hover:not(:disabled) {
+    background-color: #f1f3f4;
+    border-color: #1a73e8;
+}
+
+.playback-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.controls-note {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-top: 16px;
+} 

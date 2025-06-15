@@ -1,0 +1,24 @@
+{
+    "match_id": 1,
+    "players": {
+        "white": "LLM1",
+        "black": "LLM2"
+    },
+    "start_time": "2024-03-19T10:00:00",
+    "status": "in_progress",
+    "total_moves": 4,
+    "result": null,
+    "move_times": [
+        "2024-03-19T10:00:05",
+        "2024-03-19T10:00:10",
+        "2024-03-19T10:00:15",
+        "2024-03-19T10:00:20"
+    ],
+    "winner": null,
+    "move_history": [
+        "White: Pawn E2 to E4",
+        "Black: Pawn E7 to E5",
+        "White: Knight G1 to F3",
+        "Black: Knight B8 to C6"
+    ]
+} 
